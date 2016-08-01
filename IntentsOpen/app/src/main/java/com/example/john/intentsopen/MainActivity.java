@@ -26,15 +26,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void alarmConfig(View view) {
 
-
-
         EditText alarmHora = (EditText) findViewById(R.id.hrEditText);
         EditText alarmMin = (EditText) findViewById(R.id.minEditText);
         EditText alarmMsg = (EditText) findViewById(R.id.msgEditText);
+        
+        String horaString = alarmHora.getText().toString();
+        String minString = alarmMin.getText().toString();
 
+        //Teste de Vazio para evitar erro de nulo
+        if (!horaString.equals("") && !minString.equals(""){
 
         int hora = Integer.parseInt(alarmHora.getText().toString());
         int min = Integer.parseInt(alarmMin.getText().toString());
+        
         String msg = alarmMsg.getText().toString();
 
 
@@ -54,8 +58,12 @@ public class MainActivity extends AppCompatActivity {
             i.putExtra(AlarmClock.EXTRA_MINUTES, min);
             startActivity(i);
         }
-
-
+        
+       } else {
+           Toast toast = Toast.makeText(getApplicationContext(), "HORÁRIO INVÁLIDO", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL, 0, 130);
+            toast.show();
+       }
     }
 
     public void musicPlayer(View view) {
