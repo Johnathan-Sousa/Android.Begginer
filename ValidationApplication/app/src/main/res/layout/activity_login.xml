@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!-- Entrada -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:text="LOGIN"
+        android:textSize="22dp"
+        android:textStyle="bold|italic"
+        android:background="@drawable/green" />
+
+    <!-- Entrada do Email -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="EMAIL:"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/EmailLoginEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu E-mail"
+        android:inputType="textEmailAddress"/>
+
+    <!-- Entrada da Senha -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SENHA:"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/SenhaLoginEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua senha em Números"
+        android:inputType="numberPassword"/>
+
+    <!-- Botao do Login -->
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="login"
+        android:text="LOGIN"/>
+
+    <!-- Botao do Cadastro -->
+    <Button
+        android:id="@+id/buttonCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="cadastro"
+        android:text="CADASTRO"/>
+</LinearLayout>
