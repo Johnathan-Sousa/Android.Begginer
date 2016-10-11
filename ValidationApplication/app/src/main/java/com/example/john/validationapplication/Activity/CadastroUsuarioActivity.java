@@ -78,7 +78,8 @@ public class CadastroUsuarioActivity extends Activity {
             Log.i("LOGS", "SENHA: "+ senhaTest );
         }
 
-
+        //If para não entrar na Intent, a não ser que receba os valores 1
+        // de cada teste que passar
         if (mail == 1 && pass == 1 && cpf == 1 && name == 1) {
 
             Bundle bundle = new Bundle();
